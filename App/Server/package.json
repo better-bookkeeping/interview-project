@@ -1,0 +1,32 @@
+{
+  "name": "@interview-project/server",
+  "license": "MIT",
+  "type": "module",
+  "types": "./src/index.ts",
+  "main": "./src/index.ts",
+  "scripts": {
+    "dev": "concurrently -n TSC,RUN \"tsc --watch\" \"sleep 3 && npm run start\"",
+    "start": "node --watch ./dist/index.js",
+    "types:generate": "tsc --build --force"
+  },
+  "prisma": {
+    "schema": "./prisma/schema.prisma",
+    "seed": "tsx ./scripts/prisma-seed/seed.ts"
+  },
+  "dependencies": {
+    "@trpc/server": "^10.44.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "zod": "^3.22.4"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.9.3",
+    "concurrently": "^8.2.2"
+  }
+}
