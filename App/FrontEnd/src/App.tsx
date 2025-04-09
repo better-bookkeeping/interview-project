@@ -5,7 +5,7 @@ import viteLogo from "/vite.svg";
 import { ServerInteraction } from "./ServerInteraction";
 
 function App() {
-  // const [count, setCount] = useState(0);
+  const foo = 'Wiggle Town!'
 
   return (
     <main className="bg-zinc-800 text-white h-screen w-screen overflow-auto flex flex-col gap-8 items-center justify-center">
